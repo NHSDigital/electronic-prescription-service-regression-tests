@@ -15,6 +15,12 @@ class SelectYourRole:
         )
         self.role_column_header = page.get_by_role("columnheader", name="Role")
 
+        # Logged-in message
+        self.logged_in_message_container = page.get_by_text(
+            "Information: Information: You"
+        )
+        self.logged_in_message = page.get_by_text("You are currently logged in")
+
         # Roles without access
         self.roles_without_access_table_body = page.get_by_role("group").locator("div")
 
@@ -34,18 +40,6 @@ class SelectYourRole:
         self.select_role_subheader = page.locator(
             "span.nhsuk-caption-l.nhsuk-caption--bottom"
         )
-
-        self.no_access_header = page.locator(".nhsuk-heading-xl")
-        self.no_access_message = page.get_by_text("None of the roles on your")
-        self.roles_without_access_header = page.get_by_role(
-            "heading", name="Your roles without access"
-        )
-        self.first_row_org_name_no_access = page.get_by_role(
-            "cell", name="NO ORG NAME (ODS: A21464)"
-        ).first
-        self.first_row_role_name_no_access = page.get_by_role(
-            "cell", name="General Medical Practitioner"
-        ).first
 
         self.no_access_header = page.locator(".nhsuk-heading-xl")
         self.no_access_message = page.get_by_text("None of the roles on your")

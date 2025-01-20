@@ -75,3 +75,12 @@ Feature: Role selection page renders roles properly when logged in
         When I click on the summary expander
         Then I can see the summary container
         And I cannot see the summary table body
+
+    @allure.tms:https://nhsd-jira.digital.nhs.uk/browse/AEA-4645
+    Scenario: User with assigned roles sees the correct logged-in message
+        Given I am logged in as a user with the role "Health Professional Access Role"
+        And I am accessing "GREENE'S PHARMACY (FG419)"
+        When I view the homepage
+        Then I see a message saying "You are currently logged in at {pharmacy} with {role}."
+          | pharmacy               | role                          |
+          | GREENE'S PHARMACY (FG419) | Health Professional Access Role |

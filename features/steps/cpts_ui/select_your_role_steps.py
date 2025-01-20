@@ -102,3 +102,13 @@ def i_can_see_the_no_access_table_body_data(context):
     select_your_role_page = SelectYourRole(context.page)
     expect(select_your_role_page.first_row_org_name_no_access).to_be_visible()
     expect(select_your_role_page.first_row_role_name_no_access).to_be_visible()
+
+
+@then('I see a message saying "You are currently logged in at {pharmacy} with {role}."')
+def i_see_logged_in_message(context, pharmacy, role):
+    select_your_role_page = SelectYourRole(context.page)
+    message = f"You are currently logged in at {pharmacy} with {role}."
+    expect(select_your_role_page.logged_in_message_container).to_contain_text(
+        "Information: Information: You"
+    )
+    expect(select_your_role_page.logged_in_message).to_contain_text(message)
