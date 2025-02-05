@@ -53,11 +53,18 @@ CIS2_USERS = {
     "dispenser": {"user_id": "555260695103", "role_id": "555265434108"},
 }
 LOGIN_USERS = {"user_id": "9449304130"}
+# Roles with Access: multiple | Roles without Access: multiple | Selected Role: No
 MOCK_CIS2_LOGIN_ID_MULTIPLE_ACCESS_ROLES = "555043308597"
-MOCK_CIS2_LOGIN_ID_NO_ACCESS_ROLE = "555083343101"
-MOCK_CIS2_LOGIN_ID_SINGLE_ACCESS_ROLE = "555043300081"
-MOCK_CIS2_LOGIN_ID_NO_ROLES = "555073103101"
+# Roles with Access: multiple | Roles without Access: multiple | Selected Role: Yes
 MOCK_CIS2_LOGIN_ID_MULTIPLE_ACCESS_ROLES_WITH_SELECTED_ROLE = "555043304334"
+# Roles with Access: 1 | Roles without Access: 0 | Selected Role: No
+MOCK_CIS2_LOGIN_ID_SINGLE_ACCESS_ROLE = "555043300081"
+# Roles with Access: 1 | Roles without Access: multiple | Selected Role: No
+MOCK_CIS2_LOGIN_ID_SINGLE_ROLE_WITH_ACCESS = "555043303526"
+# Roles with Access: 0 | Roles without Access: multiple | Selected Role: No
+MOCK_CIS2_LOGIN_ID_NO_ACCESS_ROLE = "555083343101"
+# Roles with Access: 0 | Roles without Access: 0 | Selected Role: No
+MOCK_CIS2_LOGIN_ID_NO_ROLES = "555073103101"
 
 REPOS = {
     "CPTS-UI": "https://github.com/NHSDigital/eps-prescription-tracker-ui",
