@@ -8,8 +8,6 @@ class ChangeRole:
         """
         self.page = page
 
-        self.page_loaded_indicator = page.get_by_test_id("eps_roleSelectionComponent")
-
         # Title and summary locators
         self.change_role_title = page.get_by_text("Change your role")
         self.roles_without_access_table = page.locator("summary")

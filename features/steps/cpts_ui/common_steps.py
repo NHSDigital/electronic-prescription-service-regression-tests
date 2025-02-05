@@ -1,5 +1,5 @@
 # pylint: disable=no-name-in-module
-from behave import given, then  # pyright: ignore [reportAttributeAccessIssue]
+from behave import given, when, then  # pyright: ignore [reportAttributeAccessIssue]
 from playwright.sync_api import expect
 
 from features.environment import (
@@ -58,6 +58,7 @@ def login_without_access(context):
 
 
 @given("I am logged in with a single access role")
+@when("I am logged in with a single access role")
 def login_single_role(context):
     context.execute_steps("given I am on the login page")
 
